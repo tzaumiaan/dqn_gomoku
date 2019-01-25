@@ -1,0 +1,3 @@
+## Gomoku reinforcement learning using DQN
+
+ongoing...
