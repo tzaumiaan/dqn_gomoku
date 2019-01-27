@@ -1,8 +1,12 @@
+from dqn import dqn
+
 import random
 
 class player():
-  def __init__(self, pid):
+  def __init__(self, pid, board_size, brain=None):
     self.pid = pid
+    if brain is not None:
+      self.brain = brain(board_size, 'p{}'.format(pid))
   
   def get_pid(self):
     return self.pid

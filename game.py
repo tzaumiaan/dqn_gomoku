@@ -41,6 +41,9 @@ class gomoku():
     if replay_mode==False:
       self.history.append((pid, pos))
   
+  def get_board(self):
+    return self.board
+
   def get_history(self):
     return self.history
 

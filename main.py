@@ -1,12 +1,14 @@
 from game import gomoku
 from player import player
+from dqn import dqn
+from config import BOARD_SIZE, WIN_SIZE
 
 def main():
-  g = gomoku(board_size=3, win_size=3)
+  g = gomoku(board_size=BOARD_SIZE, win_size=WIN_SIZE)
   g.vis_board()
   
-  p1 = player(pid=1)
-  p2 = player(pid=2)
+  p1 = player(pid=1, board_size=BOARD_SIZE, brain=dqn)
+  p2 = player(pid=2, board_size=BOARD_SIZE)
   turn = p1.get_pid()
   
   i = 0
